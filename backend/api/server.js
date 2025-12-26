@@ -30,4 +30,6 @@ if (ENV.NODE_ENV === 'prod') {
     });
 }
 
-export default app;
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
