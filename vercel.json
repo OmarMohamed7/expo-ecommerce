@@ -1,7 +1,7 @@
 {
     "functions": {
         "backend/src/**/*.js": {
-            "runtime": "nodejs@18"
+            "runtime": "nodejs20.x"
         }
     },
     "routes": [
