@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import path from 'path';
-import ENV from '../backend/src/config/env.js';
+import ENV from './config/env.js';
 
 dotenv.config();
 
