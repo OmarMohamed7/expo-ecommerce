@@ -21,9 +21,6 @@ app.get('/api/health', (req, res) => {
     res.status(200).json({ message: 'success' });
 });
 
-app.get('/', (req, res) => {
-    res.status(200).json({ message: 'Hello World' });
-});
 
 // Make app ready for deployment
 if (ENV.NODE_ENV === 'prod') {
@@ -33,6 +30,4 @@ if (ENV.NODE_ENV === 'prod') {
     });
 }
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-});
+export default app;
