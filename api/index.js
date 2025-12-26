@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import path from 'path';
-import ENV from './config/env.js';
+import ENV from '../backend/src/config/env.js';
 
 dotenv.config();
 
@@ -11,11 +11,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const port = ENV.PORT;
 
 const __dirname = path.resolve();
-
-
 
 app.get('/api/health', (req, res) => {
     res.status(200).json({ message: 'success' });
@@ -30,6 +27,4 @@ if (ENV.NODE_ENV === 'prod') {
     });
 }
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-});
+export default app;

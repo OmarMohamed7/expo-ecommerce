@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm install --prefix backend && npm install --prefix admin && npm run build --prefix admin && npm run start --prefix backend",
-    "start": "npm run start --prefix backend"
+    "build": "echo 'Building...'"
   },
   "repository": {
     "type": "git",
@@ -14,7 +13,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/OmarMohamed7/expo-ecommerce/issues"
   },
