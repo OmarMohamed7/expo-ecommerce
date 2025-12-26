@@ -1,20 +1,23 @@
 {
-    "functions": {
-        "backend/src/**/*.js": {
-            "runtime": "@vercel/node"
+    "version": 2,
+    "builds": [
+        {
+            "src": "api/**/*.js",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "admin/dist/**",
+            "use": "@vercel/static"
         }
-    },
+    ],
     "routes": [
         {
             "src": "/api/(.*)",
-            "dest": "/backend/src/server.js"
-        },
-        {
-            "handle": "filesystem"
+            "dest": "/api/server.js"
         },
         {
             "src": "/(.*)",
-            "dest": "/admin/dist/index.html"
+            "dest": "/admin/dist/$1"
         }
     ]
 }
